@@ -2,8 +2,10 @@ import random
 import colorama
 
 #Déclaration des variables
-listeMots = ["loutre", "wombat", "furets", "orques", "ratons", "phoque", "otarie", "saumon", "canide", "arctos"]
-mot = listeMots[random.randint(0, len(listeMots) - 1)]
+fichier = open("listeMot.txt", "r")
+listeMots = fichier.readlines()
+#listeMots = ["loutre", "wombat", "furets", "orques", "ratons", "phoque", "otarie", "saumon", "canide", "arctos"]
+mot = listeMots[random.randint(0, len(listeMots) - 1)].replace("\n", "")
 #patate est utilisé pour tester les mots à lettres multiples, retirer des commentaires patates pour tester
 #mot = "patate"
 #le compteur sert à compter le nombre de tentative
